@@ -1,8 +1,8 @@
 def vmessage(body,vphone):
     from twilio.rest import Client
     # Your Account Sid and Auth Token from twilio.com / console
-    account_sid = 'AC6247dc46c20b404b8d9dd8a2f30accb5'
-    auth_token = 'b1e36783788f71b90642060f42050b77'
+    account_sid = 'Axxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    auth_token = 'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
     client = Client(account_sid, auth_token)
 
@@ -10,7 +10,7 @@ def vmessage(body,vphone):
     received from Twilio and the value of 'to'
     with the number in which you want to send message.'''
     message = client.messages.create(
-                                from_='+919119388593',
+                                from_='mobile no.',
                                 body =body,
                                 to = str(vphone)
                             )
@@ -21,8 +21,8 @@ def vmessage(body,vphone):
 def hmessage(body,hphone):
     from twilio.rest import Client
     # Your Account Sid and Auth Token from twilio.com / console
-    account_sid = 'AC6247dc46c20b404b8d9dd8a2f30accb5'
-    auth_token = 'b1e36783788f71b90642060f42050b77'
+    account_sid = 'Axxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    auth_token = 'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
     client = Client(account_sid, auth_token)
 
@@ -30,9 +30,9 @@ def hmessage(body,hphone):
     received from Twilio and the value of 'to'
     with the number in which you want to send message.'''
     message = client.messages.create(
-                                from_='+18593401868',
+                                from_='+1*******68',
                                 body = body,
-                                to = '+919119388593'
+                                to = str(hphone)
                             )
 
     print("Message sent to the Host")
