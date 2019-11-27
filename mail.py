@@ -6,7 +6,7 @@ def emailv(hname,vname,vphone,vmail,intime,outtime):
     from email import encoders
    # from message import *
 
-    fromaddr = "keshavnyati12@gmail.com"
+    fromaddr = "email from which mail has to be sent"
     toaddr = vmail
 
     # instance of MIMEMultipart
@@ -34,7 +34,7 @@ def emailv(hname,vname,vphone,vmail,intime,outtime):
     s.starttls()
 
     # Authentication
-    s.login(fromaddr, "keshav123")
+    s.login(fromaddr, "password")
 
     # Converts the Multipart msg into a string
     text = msg.as_string()
@@ -56,7 +56,7 @@ def emailh(hmail,vname,vphone,vmail,intime,hphone):
     from email import encoders
     #from message import *
 
-    fromaddr = "keshavnyati12@gmail.com"
+    fromaddr = "email from which mail has to be sent"
     toaddr = hmail
 
     # instance of MIMEMultipart
@@ -84,7 +84,7 @@ def emailh(hmail,vname,vphone,vmail,intime,hphone):
     s.starttls()
 
     # Authentication
-    s.login(fromaddr, "keshav123")
+    s.login(fromaddr, "password")
 
     # Converts the Multipart msg into a string
     text = msg.as_string()
