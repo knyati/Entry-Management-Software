@@ -41,9 +41,9 @@ Here, in this table, Visitor's Mob No is taken as a foreign key which is referen
 1-> When we run the the scratch.py file a window will pop-up consisting of two forms. First form is to be filled by the visitor to enter the information during the check in time. 
   
 2-> This information is then sent to the *entry* function from where the database is updated using the information such as visitor's name, host name,
-visitor's phone number, in-time etc using mysql.connector and sql quries.
+visitor's phone number, in-time etc using mysql.connector and sql queries.
 
-3-> Here, we are checking whether the visitor had already checked out or not from the previous visit and storing the information of visitors and host if they are not already stored in the database. If they are already stored in the database we do not need to make any new entry and just gather the information of both visitor as well as host from Visitor and Host table respectively. 
+3-> Here, we are storing the information of visitors and host if they are not already stored in the database. If they are already stored in the database we do not need to make any new entry and just gather the information of both visitor as well as host from Visitor and Host table respectively. 
 
 4-> In Visitors table mobile number of visitor is used as primary key. For the Host table mobile number of the host is used as primary key.
 
