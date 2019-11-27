@@ -89,5 +89,5 @@ We will use the host's mobile number from this entry to gather all the informati
 10-> Entering visitor's mobile number during check-out. 
 ![enter image description here](https://lh3.googleusercontent.com/in52hhJ_w1kVju_wI6q8tWD8BPwe3XDDKiISwv1U9s1fZX1Mmpm-MBsdIPdY0HcDtLgOZA-jnwqY)
   
-10- And now finally, the visitor will recieve an email as shown.  
+10- And now finally, the visitor will recieve a message and an email as shown.  
 ![enter image description here](https://lh3.googleusercontent.com/7vXSvbqKHRBI-ZTEyL4OaogcRSevWpoAm1dgDb8HGv5AUSyZFu0piMu2nliB0xvq1PesHnZ95jVU)
