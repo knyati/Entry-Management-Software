@@ -3,7 +3,7 @@ from tkinter import *
 from mail import *
 from message import *
 
-def entry(e1,e2,e3,e4,e5,e6):
+def entry(e1,e2,e3,e4,e5,e6):                           # if check-in button is selected then this function is called.
     try:
         import mysql.connector
         mydb = mysql.connector.connect(
@@ -44,7 +44,7 @@ def entry(e1,e2,e3,e4,e5,e6):
     exit()
 
 
-def exit1(num):
+def exit1(num):                                         # if check-out button is selected then this function is called.
     import mysql.connector
     mydb = mysql.connector.connect(
         host = "localhost",
@@ -150,9 +150,6 @@ def start():
     e7 = Entry(window, text="")
     e7.place(x=200, y=370)
 
-   # if e7.get() > 0:
-
-
     btn1 = Button(window, bg="white",fg='black',text="Check In",
                  command=lambda: entry(e1.get(),e2.get(),e3.get(),e4.get(),e5.get(),e6.get()))
 
@@ -168,4 +165,4 @@ def start():
 
 
 
-start()
+start()                             # calling the start function to start the application.
