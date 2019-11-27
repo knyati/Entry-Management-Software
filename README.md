@@ -45,27 +45,25 @@ visitor's phone number, in-time etc using mysql.connector and sql queries.
 
 3-> Here, we are storing the information of visitors and host if they are not already stored in the database. If they are already stored in the database we do not need to make any new entry and just gather the information of both visitor as well as host from Visitor and Host table respectively. 
 
-4-> In Visitors table mobile number of visitor is used as primary key. For the Host table mobile number of the host is used as primary key.
+4-> We will also check whether the visitor already checked out or not from the previous visit. We are updating visit table by making a new entry using visitor's mobile number, host's mobile number and the time of visiting in the Intime column and setting Outtime column to be 'Null'.
 
-5-> We will also check whether the visitor already checked out or not from the previous visit. We are updating visit table by making a new entry using visitor's mobile number, host's mobile number and the time of visiting in the Intime column and setting Outtime column to be 'Null'.
-
-6-> Also inside the function *entry*, *emailhost* function is called. In the function emailhost (host's email, visitor's email, visitor's name and visitor's phone no) is passed as parameter. The main purpose of this emailhost function is to send the details of the visitor to the host.
+5-> Also inside the function *entry*, *emailh* function is called. In the function emailh (host's email, visitor's email, visitor's name and visitor's phone no) is passed as parameter. The main purpose of this emailhost function is to send the details of the visitor to the host via email
   
-7-> Now after the entry function is completely executed, *hsms* function is called. In the function hsms (visitor's email, visitor's name , visitor's phone no, host's name and visitor's in-time) is passed as parameters. The function *hsms* is used to send sms to the host about the information of the visitor.  
+6-> Now after the entry function is completely executed, *hmessage* function is called. In the function hsms (visitor's email, visitor's name , visitor's phone no, host's name and visitor's in-time) is passed as parameters. The function *hmessage* is used to send sms to the host about the information of the visitor via text message over the mobile phone.  
 In this function , Twilio API is used to send message to the host.  
   
 Till here, we have handled the entry of the visitor. 
 
-8-> Now if a visitor wants to check-out. To do this user has to fill the check-out form at the execution of the program. There visitor has to fill the mobile number which he entered during the time of check in. 
+7-> Now if a visitor wants to check-out. To do this user has to fill the check-out form at the execution of the program. There visitor has to fill the mobile number which he entered during the time of check in. 
   
-9-> This number is then sent to the *exit1* function as a parameter. We then check our visit table whether this number is present in the database or not and if this particular has already checked-out.
+8-> This number is then sent to the *exit1* function as a parameter. We then check our visit table whether this number is present in the database or not and if this particular has already checked-out.
 
-10-> If this person has not checked-ot already then we will update the Outtime column of the Visit table with the current time.
+9-> If this person has not checked-ot already then we will update the Outtime column of the Visit table with the current time.
 We will use the host's mobile number from this entry to gather all the information like host's mail id, visitor's mail id, visitor's phone number and host's name, in-time and out-time of the visitor.
 
-11-> After this we will call *vmail* function with (host's mail id, visitor's mail id, visitor's phone number and host's name, in-time and out-time of the visitor) as parameters. This function is used to send an email to the visitor regarding his visit.
+10-> After this we will call *emailv* function with (host's mail id, visitor's mail id, visitor's phone number and host's name, in-time and out-time of the visitor) as parameters. This function is used to send an email to the visitor regarding his visit via email.
 
-12->  Also, in the vmail function we are calling *vsms* function. This function is used to send sms to the visitor about the information regarding his/her last visit like in-time, out-time, host's name, host's mail id etc.
+11->  Also, in the emailv function we are calling *vmessage* function. This function is used to send sms to the visitor about the information regarding his/her last visit like in-time, out-time, host's name, host's mail id etc.
 
 # Demonstration of the use of the Application  
   
