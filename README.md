@@ -1,5 +1,5 @@
 # Entry-Management-Software
-Here we have created an entry management system using Python for programming and Mysql for the purpose of database management.
+Here I have created an entry management system using Python for programming and Mysql for the purpose of database management.
 
 ## Software Used  
 1-> Pycharm Community Edition  For IDE  
