@@ -1,4 +1,5 @@
 # Entry-Management-Software
+Innovacer Summer geeks 2020 Assignment for SDE.
 Here I have created an entry management system using Python for programming and Mysql for the purpose of database management.
 
 ## Software Used  
