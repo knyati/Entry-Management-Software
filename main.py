@@ -2,7 +2,7 @@ from datetime import datetime
 from tkinter import *
 from mail import *
 from message import *
-import numpy
+# import numpy
 
 
 def entry(e1, e2, e3, e4, e5, e6):  # if check-in button is selected then this function is called.
